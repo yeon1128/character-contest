@@ -1,0 +1,135 @@
+/* reset */
+body {
+    margin: 0;
+    background-image: url("https://images.unsplash.com/photo-1520034475321-cbe63696469a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+}
+
+/* animation */
+@keyframes 하트 {
+    0% {
+        transform: scale(0.8) rotate(45deg);
+    }
+    100% {
+        transform: scale(1) rotate(45deg);
+    }
+}
+
+/* layout */
+.container {
+    margin: 200px auto 0;
+}
+
+/* design */
+.title {
+    color: aliceblue;
+}
+
+.face {
+    width: 400px;
+    height: 330px;
+    background-color: #FFB23C;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 0 0 500px orange;
+    text-align: center;
+}
+
+.leaf {
+    background-color: green;
+    width: 50px;
+    height: 60px;
+    margin: 0 auto;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transform: translateY(-20px);
+    box-shadow: inset 0px 10px 10px #7EF774;
+    animation-name: 잎;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.eyes {
+    margin: 0px 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.eyes::before,
+.eyes::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: inset -2px -5px 0 10px currentColor;
+}
+
+.mouth {
+    background-color: #7EF774;
+    height: 30px;
+    margin: 30px 180px 0;
+    background-color: red;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 30px;
+}
+
+.nose {
+    margin-top: 20px;
+}
+
+.nose::after {
+    content: "";
+    display: inline-block;
+    padding: 0;
+    width: 15px;
+    height: 30px;
+    background-color:black;
+    border-radius: 40px;
+    margin: 0 90px;
+}
+
+.upper-body {
+    background-color: #FFB23C;
+    width: 900px;
+    height: 400px;
+    margin: 0 auto;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.heart {
+    width: 300px;
+    height: 300px;
+    background: #ea2027;
+    position: relative;
+    transform: rotate(45deg);
+    box-shadow: 0px 0px 30px red;
+    animation-name: 하트; 
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    border-radius: 50%;
+    background: #ea2027;
+    
+}
+
+.heart::before {
+    left: -50%;
+}
+
+.heart::after {
+    top: -50%;
+}
